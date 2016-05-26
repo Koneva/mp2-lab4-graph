@@ -158,8 +158,11 @@
     <ProjectReference Include="..\Binary Tree\Binary Tree.vcxproj">
       <Project>{8caca287-ab65-4edb-8f81-71ec10c1a2bb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\GraphLab\GraphLab.vcxproj">
-      <Project>{8aab7917-122a-4cd3-8719-a4cba6af0781}</Project>
+    <ProjectReference Include="..\D-Heap\D-Heap.vcxproj">
+      <Project>{a1418813-add7-42f4-bf4a-0eb649a37de5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Disjoint_set\Disjoint_set.vcxproj">
+      <Project>{95133632-bcd8-4a86-b2d8-8edd65590636}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Graph\Graph.vcxproj">
       <Project>{12e16b36-e905-4b49-abe5-1a3fde6f99fa}</Project>

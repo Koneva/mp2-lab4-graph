@@ -149,9 +149,6 @@
     <ProjectReference Include="..\Binary Tree\Binary Tree.vcxproj">
       <Project>{8caca287-ab65-4edb-8f81-71ec10c1a2bb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\GraphLab\GraphLab.vcxproj">
-      <Project>{8aab7917-122a-4cd3-8719-a4cba6af0781}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\Table\Table.vcxproj">
       <Project>{aab3f7ee-9751-4935-8980-d3c4978993c7}</Project>
     </ProjectReference>
