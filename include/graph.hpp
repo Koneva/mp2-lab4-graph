@@ -21,7 +21,7 @@ template <class KeyType>
 class Graph
 {
 private:
-	int n; //number of vertices
+	int n; //number of vertexes
 	int m; //number of edges
 	Edge<KeyType>** edges;
 	int current;
@@ -31,7 +31,7 @@ public:
 	void CreateGraph(KeyType, KeyType);
 	void Push(int, int, KeyType);
 	void Remove(int, int);
-	int GetCount(); //vertices
+	int GetCount(); //vertexes
 	int GetEdgeSize();
 	int GetRealSize();
 	Edge<KeyType>*  GetEdge(int);
@@ -41,7 +41,6 @@ public:
 	void Create(int&, int&);
 	bool Scan(int, int*);
 	void Sort();
-	/*KeyType* Dijkstra(int, KeyType*&);*/
 };
 
 template <class KeyType>
@@ -57,7 +56,7 @@ Graph<KeyType>::Graph(int v, int e)
 {
 	if (v < 0)
 		throw
-		exception("Incorrect vertice"); //test
+		exception("Incorrect vertex"); //test
 	else
 		n = v;
 	if ((e < 0) || (e > n * (n - 1) / 2))
@@ -88,7 +87,7 @@ void Graph<KeyType>::Push(int f, int t, KeyType w)
 		exception("Loops are prohibited"); //test
 	if ((f > n) || (t > n))
 		throw
-		exception("There are no such vertices"); //test
+		exception("There are no such vertexs"); //test
 	edges[current] = new Edge<KeyType>(f, t, w);
 	current++; //test
 }
@@ -144,7 +143,7 @@ KeyType Graph<KeyType>::GetWeight(int f, int t)
 {
 	if ((f < 0) || (f > n) || (t < 0) || (t > n))
 		throw
-		exception("Incorrect vertices"); //test
+		exception("Incorrect vertexs"); //test
 	for (int i = 0; i < current; i++)
 		if ((edges[i]->from == f) && (edges[i]->to == t) || (edges[i]->from == t) && (edges[i]->to == f))
 			return edges[i]->weight;
@@ -221,63 +220,3 @@ bool Graph<KeyType>::Scan(int f, int* b)
 	return res;
 }
 
-//template <class KeyType>
-//KeyType* Graph<KeyType>::Dijkstra(int s, KeyType *&way)
-//{
-//	if ((s < 0) || (s >= n))
-//		throw 
-//		exception ("Error");	
-//	KeyType **graph = new KeyType*[n];
-//	for (int i = 0; i < n; i++)
-//		graph[i] = new KeyType[n];
-//	for (int i = 0;i < n; i++)
-//		for (int j = 0;j < n; j++)
-//			graph[i][j] = -1;
-//	for (int i = 0;i < n; i++)
-//		for (int j = 0;j < m; j++)
-//		{
-//			if ((edges[j]->from == i) || (edges[j]->to == i))
-//			{
-//				graph[edges[j]->from][edges[j]->to] = edges[j]->weight;
-//				graph[edges[j]->to][edges[j]->from] = edges[j]->weight;
-//			}
-//		}
-//
-//	KeyType *dist = new KeyType[n]; 
-//	int *vis = new int[n]; 
-//	for (int i = 0; i < n; i++)
-//		vis[i] = -1;
-//	vis[0] = s;
-//	int path;
-//	int w, min;
-//	for (int i = 0; i < n; i++) 
-//	{                       
-//		if (graph[s][i] == -1)
-//			dist[i]=MAX_KeyType;
-//			else dist[i]=graph[s][i];
-//	}
-//	for (int i=1; i<n-1; i++) 
-//	{
-//		min=MAX_KeyType;
-//		for (int k=0; k<n; k++) {
-//			if (dist[k] < min && k!=s && !visit(k, vis) ) 
-//			{
-//				w=k;
-//				min=dist[k];
-//			}
-//		}
-//		if (min == MAX_KeyType) break;
-//		vis[i]=w;
-//		for (int j=0; j < n; j++) {
-//			if (!visit(j,vis) && graph[w][j] != -1 && (dist[w]+graph[w][j])<=dist[j]) 
-//			{
-//				P[j]=w;
-//				dist[j]=dist[w]+graph[w][j];
-//			}
-//		}
-//	}
-//
-//	dist[s] = 0;
-//	return dist;
-//}
-//

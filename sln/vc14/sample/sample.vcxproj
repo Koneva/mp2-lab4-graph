@@ -130,7 +130,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Binary Tree.lib;Table.lib;D-Heap.lib;Disjoint Set.lib;Priority Queue.lib;Graph.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Binary Tree.lib;Table.lib;D-Heap.lib;Disjoint Set.lib;Priority Queue.lib;Graph.lib;Algorithm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../Release</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

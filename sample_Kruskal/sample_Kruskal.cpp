@@ -9,7 +9,7 @@ void main()
 	cin >> q;
 	system("cls");
 	int n;
-	cout << "Enter the number of vertices" << endl;
+	cout << "Enter the number of vertexes" << endl;
 	cin >> n;
 	cout << "Enter the number of edges" << endl;
 	int m;
@@ -33,7 +33,7 @@ void main()
 	{
 		for (int i = 0; i<m;i++)
 		{
-			cout << "Enter the 'from' vertice, 'to' vertice and weight" << endl;
+			cout << "Enter the 'from' vertex, 'to' vertex and weight" << endl;
 			int f, t;
 			KeyType w;
 			cin >> f;

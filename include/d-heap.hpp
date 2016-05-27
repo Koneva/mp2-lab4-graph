@@ -48,6 +48,7 @@ public:
 	int GetCount();
 	Prior<KeyType>* GetKey(int);
 	void Sort();
+	void Print();
 };
 
 template <class KeyType>
@@ -277,5 +278,27 @@ void D_heap<KeyType>::Sort()
 		Swap(tmp2, tmp);
 		tmp++;
 		tmp2--;
+	}
+}
+
+
+template <class KeyType>
+void D_heap<KeyType>::Print()
+{
+	int level = 0, tmp = 0;
+	while (tmp < count)
+	{
+		tmp += pow(d, level);
+		level++;
+	}
+	int k = 1, z = 0;
+	cout << " " << keys[0]->pr << " ";
+	for (int i = 1; i < level; i++)
+	{
+		for (int j = k; (j < k + pow(d, i)) && (j < count); j++)
+			cout << keys[j]->pr << " ";
+		if (k + pow(d, i) > count)
+			k = count;
+		else k += pow(d, i);
 	}
 }
