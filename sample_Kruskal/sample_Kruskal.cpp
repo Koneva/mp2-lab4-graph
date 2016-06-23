@@ -1,4 +1,4 @@
-#include "kruskal.hpp"
+#include "algorithm.hpp"
 
 typedef float KeyType;
 

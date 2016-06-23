@@ -1,20 +1,24 @@
+#include <iostream>
 #include "graph.hpp"
 #include "priority_queue.hpp"
-#include <iostream>
 #include "algorithm.hpp"
 
-typedef int typ;
+typedef int typ; // вот  тип данных
+// и вот в этой вещи смысла вообще не вижу —аш, это Ћыков
 
 void main()
 {
-	cout << "Enter the number of vertexes" << endl;
+	cout << "Enter the number of vertices" << endl;
 	int n;
 	cin >> n;
 	cout << "Enter the number of edges" << endl;
 	int m;
 	cin >> m;
 	Graph<typ> *graph = new Graph<typ>(n, m);
-	typ *P = new typ(n); 
+	typ *P = new typ[n]; // () -> [] это же массив, а неф“  ј ункци€ так было у Ћыкова, € пока его измен€ю работает и ок
+	// а тут создаетс€ вектор
+	//не спорю
+	// так не вектор создаетс€, а указатель на область пам€ти, в которой лежит значение n да € пон€ти€ не имею, почему тут круглые
 	for (int i = 0; i <= n;i++)
 		P[i] = 0;
 	cout << "Enter min and max value" << endl;
@@ -32,7 +36,7 @@ void main()
 	cout << "Result: " << endl << endl;
 	for (int i = 0; i<n;i++)
 		cout << i << ' ';
-	cout << "Vertexes " << endl << endl;
+	cout << "Vertices " << endl << endl;
 	for (int i = 0; i < n; i++)
 		if (dist[i] == max_heap)
 			cout << 0 << ' ';
@@ -41,6 +45,6 @@ void main()
 	cout << "Shortest ways " << endl << endl;
 	for (int i = 0;i<n;i++)
 		cout << P[i] << ' ';
-	cout << "Previous vertexes " << endl << endl;
-
+	cout << "Previous vertices " << endl << endl;
+	// не забудь про освобождение пам€ти. и main возвращает int по стандарту  ј  ќ—¬ќЅќƒ»“№
 }
